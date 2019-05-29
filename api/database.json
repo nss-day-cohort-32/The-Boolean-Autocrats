@@ -1,0 +1,99 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "jr",
+      "password": "jr"
+    },
+    {
+      "id": 2,
+      "username": "nss",
+      "password": "nss"
+    }
+  ],
+  "news": [
+    {
+      "id": 2,
+      "title": "Raging Bull",
+      "synopsis": "Legal",
+      "url": "http://indiatimes.com/sapien/cursus/vestibulum/proin/eu.html?metus=in&aenean=eleifend&fermentum=quam&donec=a&ut=odio&mauris=in&eget=hac&massa=habitasse&tempor=platea&convallis=dictumst&nulla=maecenas&neque=ut&libero=massa&convallis=quis&eget=augue&eleifend=luctus&luctus=tincidunt&ultricies=nulla&eu=mollis&nibh=molestie&quisque=lorem&id=quisque&justo=ut&sit=erat&amet=curabitur&sapien=gravida&dignissim=nisi&vestibulum=at&vestibulum=nibh&ante=in&ipsum=hac&primis=habitasse&in=platea&faucibus=dictumst&orci=aliquam&luctus=augue&et=quam&ultrices=sollicitudin&posuere=vitae&cubilia=consectetuer&curae=eget&nulla=rutrum&dapibus=at&dolor=lorem&vel=integer&est=tincidunt&donec=ante&odio=vel&justo=ipsum&sollicitudin=praesent&ut=blandit&suscipit=lacinia&a=erat&feugiat=vestibulum&et=sed&eros=magna&vestibulum=at&ac=nunc&est=commodo&lacinia=placerat&nisi=praesent&venenatis=blandit&tristique=nam&fusce=nulla&congue=integer&diam=pede&id=justo&ornare=lacinia&imperdiet=eget&sapien=tincidunt&urna=eget&pretium=tempus&nisl=vel&ut=pede&volutpat=morbi",
+      "userId": "2"
+    },
+    {
+      "id": 4,
+      "title": "Not Here to Be Loved (Je ne suis pas là pour être aimé)",
+      "synopsis": "Accounting",
+      "url": "https://go.com/amet/sem.png?in=vestibulum&lectus=ac&pellentesque=est&at=lacinia&nulla=nisi&suspendisse=venenatis&potenti=tristique&cras=fusce&in=congue&purus=diam&eu=id&magna=ornare&vulputate=imperdiet&luctus=sapien&cum=urna&sociis=pretium&natoque=nisl&penatibus=ut&et=volutpat&magnis=sapien&dis=arcu&parturient=sed&montes=augue&nascetur=aliquam&ridiculus=erat&mus=volutpat&vivamus=in&vestibulum=congue&sagittis=etiam&sapien=justo&cum=etiam&sociis=pretium&natoque=iaculis&penatibus=justo&et=in&magnis=hac&dis=habitasse&parturient=platea&montes=dictumst&nascetur=etiam&ridiculus=faucibus&mus=cursus&etiam=urna&vel=ut&augue=tellus&vestibulum=nulla&rutrum=ut&rutrum=erat&neque=id",
+      "userId": "2"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Caribbean Pygmymelon",
+      "date": "8/10/2018",
+      "location": "17679 Chinook Road",
+      "userId": "1"
+    },
+    {
+      "id": 2,
+      "name": "Cheesewood",
+      "date": "8/6/2018",
+      "location": "0 Dawn Road",
+      "userId": "1"
+    },
+    {
+      "id": 3,
+      "name": "Elmleaf Goldenrod",
+      "date": "2/18/2019",
+      "location": "1980 Forest Avenue",
+      "userId": "2"
+    },
+    {
+      "id": 4,
+      "name": "Desert Willow",
+      "date": "1/27/2019",
+      "location": "7 Sloan Point",
+      "userId": "1"
+    },
+    {
+      "id": 5,
+      "name": "Wisteria",
+      "date": "4/21/2019",
+      "location": "60 1st Way",
+      "userId": "2"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Petrijevci",
+      "info": "15248 Everett Pass",
+      "userId": "2"
+    },
+    {
+      "id": 2,
+      "name": "Beibei",
+      "info": "8 Katie Lane",
+      "userId": "2"
+    },
+    {
+      "id": 3,
+      "name": "Stockholm",
+      "info": "73 Pond Road",
+      "userId": "2"
+    }
+  ],
+  "friends": [
+    {
+      "id": "1",
+      "activeId": 1,
+      "friendsId": 2
+    },
+    {
+      "id": "2",
+      "activeId": 2,
+      "friendsId": 1
+    }
+  ]
+}
