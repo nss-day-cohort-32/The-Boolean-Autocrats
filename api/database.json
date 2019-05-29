@@ -56,12 +56,6 @@
       "location": "Palm Beach"
     },
     {
-      "name": "nss party",
-      "date": "2019-05-02",
-      "location": "nashville ",
-      "id": 10
-    },
-    {
       "name": "Desert Willow",
       "date": "2019-05-08",
       "location": "nashville 1",
@@ -72,6 +66,12 @@
       "name": "Robby birth",
       "date": "1978-12-04",
       "location": "Michigan"
+    },
+    {
+      "name": "Picnic",
+      "date": "2019-05-29",
+      "location": "Nashville Tn",
+      "id": 13
     }
   ],
   "tasks": [
