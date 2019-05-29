@@ -1,23 +1,28 @@
 import React, { Component } from "react";
+import { Button } from 'reactstrap'
 
 class TaskList extends Component {
   render() {
     return (
-      <section className="tasks">
-        <h2>All Tasks</h2>
-        <div className="taskButton">
-          <button
-            type="button"
-            className="btn btn-dark"
-            onClick={() => {
-              this.props.history.push("/tasks/new");
-            }}
-          >
-            Add TaskList
-          </button>
-        </div>
-        {this.props.tasks.map(item => {})}
-      </section>
+      <article>
+        <h2>Tasks</h2>
+        <hr />
+        <Button color="primary">Add New Task</Button>
+        {this.props.tasks.map(task => (
+          <div key={task.id}>
+            <h3>{task.name}</h3>
+            <h3>{task.info}</h3>
+
+            <div>
+              <Button
+                color="success"
+                size="sm"
+                onClick={() => this.props.deleteTask(task.id)}>Delete Task
+            </Button>
+            </div>
+          </div>
+        ))}
+      </article>
     );
   }
 }
