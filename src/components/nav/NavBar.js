@@ -1,21 +1,39 @@
-import React, { Component } from "react"
+
 import { Link } from "react-router-dom"
+import React from "react";
+import { Navbar, NavItem, NavLink, Nav } from "reactstrap";
 
-
-
-class NavBar extends Component {
-    render() {
-        return (
-            <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
-                <ol className="nav nav-pills">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/events">Events</Link>
-                    </li>
-                   
-                </ol>
-            </nav>
-        )
-    }
+class NavBar extends React.Component {
+  render() {
+    return (
+      <div>
+        <Navbar color="dark" faded expand="md">
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/news">
+                <h4>News</h4>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/events">
+                <h4>Events</h4>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/tasks">
+                <h4>Tasks</h4>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/friends">
+                <h4>Friends</h4>
+              </NavLink>
+            </NavItem>
+          </Nav>
+        </Navbar>
+      </div>
+    );
+  }
 }
 
-export default NavBar
+export default NavBar;
