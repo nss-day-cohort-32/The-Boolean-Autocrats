@@ -5,31 +5,34 @@ import NewsList from "./news/NewsList";
 // import NewForm from "./news/NewsForm";
 import NewsManager from "../modules/NewsManager";
 
+import Register from "./userlogin/Register";
+import Login from "./userlogin/Login";
+
 class ApplicationViews extends Component {
   state = {
     news: []
   };
 
-  deleteNews = id => {
-    NewsManager.delete(id).then(news => {
+  deleteNews = (id) => {
+    NewsManager.delete(id).then((news) => {
       this.props.history.push("/news");
       this.setState({ news: news });
     });
   };
 
-  addNews = news =>
+  addNews = (news) =>
     NewsManager.post(news)
       .then(() => NewsManager.getAll())
-      .then(news =>
+      .then((news) =>
         this.setState({
           news: news
         })
       );
 
-  updateNews = editedNewsObject => {
+  updateNews = (editedNewsObject) => {
     return NewsManager.put(editedNewsObject)
       .then(() => NewsManager.getAll())
-      .then(news => {
+      .then((news) => {
         this.setState({
           news: news
         });
@@ -37,7 +40,8 @@ class ApplicationViews extends Component {
   };
 
   componentDidMount() {
-    NewsManager.getAll().then(allNews => {
+    
+    NewsManager.getAll().then((allNews) => {
       this.setState({
         news: allNews
       });
@@ -48,9 +52,38 @@ class ApplicationViews extends Component {
     return (
       <>
         <Route
+          path="/register"
+          render={(props) => {
+            return (
+              <Register
+                {...props}
+                addUser={this.props.addUser}
+                users={this.props.users}
+                registerIt={this.props.registerIt}
+                getAll={this.props.getAllUsers}
+              />
+            );
+          }}
+        />
+
+        <Route
+          exact
+          path="/"
+          render={(props) => {
+            return (
+              <Login
+                {...props}
+                populateAppState={this.props.populateAppState}
+                registerIt={this.props.registerIt}
+              />
+            );
+          }}
+        />
+
+        <Route
           exact
           path="/news"
-          render={props => {
+          render={(props) => {
             return (
               <NewsList
                 {...props}
