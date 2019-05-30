@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from "reactstrap"
 
 class TaskForm extends Component {
 
@@ -13,11 +14,11 @@ class TaskForm extends Component {
     };
     ConstructTask = evt => {
         evt.preventDefault();
-        const task = {
+        const tasks = {
             name: this.state.name,
             info: this.state.info
         };
-
+        this.props.addTask(tasks).then(() => this.props.history.push("/tasks"));
     }
 
     render() {
@@ -44,6 +45,9 @@ class TaskForm extends Component {
                             placeholder="info"
                         />
                     </div>
+                    <Button className="primary"
+                        type="submit"
+                        onClick={this.ConstructTask}>Save</Button>
                 </form>
             </>
         );

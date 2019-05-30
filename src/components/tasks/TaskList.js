@@ -7,7 +7,7 @@ class TaskList extends Component {
       <article>
         <h2>Tasks</h2>
         <hr />
-        <Button color="primary">Add New Task</Button>
+        <Button color="primary" onClick={() => { this.props.history.push("/tasks/new") }}>Add New Task</Button>
         {this.props.tasks.map(task => (
           <div key={task.id}>
             <h3>{task.name}</h3>

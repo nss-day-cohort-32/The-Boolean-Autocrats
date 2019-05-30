@@ -11,6 +11,7 @@ import NewsList from "./news/NewsList";
 import NewsManager from "../modules/NewsManager";
 import TaskManager from "../modules/TaskManager"
 import TaskList from "./tasks/TaskList"
+import TaskForm from "./tasks/TaskForm"
 
 
 
@@ -83,6 +84,15 @@ class ApplicationViews extends Component {
         this.setState({ tasks: tasks });
       });
   };
+
+  addTask = tasks =>
+    TaskManager.post(tasks)
+      .then(() => TaskManager.getAll())
+      .then(tasks =>
+        this.setState({
+          tasks: tasks
+        })
+      );
 
   addNews = news =>
     NewsManager.post(news)
@@ -170,6 +180,10 @@ class ApplicationViews extends Component {
           return <EventForm {...props}
             addEvent={this.addEvent} />
 
+        }} />
+        <Route path="/tasks/new" render={(props) => {
+          return <TaskForm {...props}
+            addTask={this.addTask} />
         }} />
 
         <Route exact path="/events/:eventId(\d+)" render={(props) => {
