@@ -7,22 +7,8 @@ import DataManager from "../modules/DataManager";
 export default class Nutshell extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      events: [],
-      tasks: [],
-      news: [],
-      messages: []
-    };
     this.populateAppState = this.populateAppState.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
   }
-
-  handleInputChange = (e) => {
-    this.setState({
-      jsonQuery: e.target.value
-    });
-  };
 
   populateAppState() {
     DataManager.getAll("users").then((users) => {
@@ -53,7 +39,6 @@ export default class Nutshell extends Component {
     if (this.isAuthenticated()) {
       return (
         <NavBar
-          handleInputChange={this.handleInputChange}
         />
       );
     }
@@ -64,7 +49,7 @@ export default class Nutshell extends Component {
       <React.Fragment>
         {this.showNav()}
         <ApplicationViews
-          handleInputChange={this.handleInputChange}
+          
           populateAppState={this.populateAppState}
           registerIt={this.registerIt}
           getAllUsers={this.getAllUsers}
