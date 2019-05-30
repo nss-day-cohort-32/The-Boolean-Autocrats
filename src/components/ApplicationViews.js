@@ -6,7 +6,7 @@ import EventDetail from "./events/EventDetail";
 import EventList from "./events/EventList";
 import EventForm from "./events/EventForm";
 import EventEditForm from "./events/EventEditForm";
-import NewsList from "./news/NewsList";
+import XNewsList from "./news/XNewsList";
 import NewsEditForm from "./news/NewsEditForm";
 import NewsManager from "../modules/NewsManager";
 import NewsForm from "./news/NewsForm";
@@ -153,7 +153,7 @@ class ApplicationViews extends Component {
           path="/news"
           render={props => {
             return (
-              <NewsList
+              <XNewsList
                 {...props}
                 allNews={this.state.news}
                 deleteNews={this.deleteNews}
