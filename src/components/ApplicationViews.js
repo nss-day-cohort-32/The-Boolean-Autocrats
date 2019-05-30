@@ -29,15 +29,16 @@ class ApplicationViews extends Component {
 
 
   deleteEvent = (id) => {
+    console.log("props", this.props.history)
     const newState = {};
-    EventManager.deleteEvent(id)
-      .then(EventManager.getAll)
+    return EventManager.deleteEvent(id)
+      .then(()=> EventManager.getAll())
       .then(events => {
         console.log("events", events);
         newState.events = events
       })
       .then(() => {
-        this.props.history.push("/events")
+
         this.setState(newState)
       })
   }
