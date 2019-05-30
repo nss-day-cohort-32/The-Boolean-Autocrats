@@ -1,9 +1,12 @@
 import { Route } from "react-router-dom";
 import React, { Component } from "react";
+import { withRouter } from "react-router";
 
 import NewsList from "./news/NewsList";
-// import NewForm from "./news/NewsForm";
+import NewsEditForm from "./news/NewsEditForm";
 import NewsManager from "../modules/NewsManager";
+import NewsForm from "./news/NewsForm";
+import NewsDetail from "./news/NewsDetail";
 
 class ApplicationViews extends Component {
   state = {
@@ -11,14 +14,16 @@ class ApplicationViews extends Component {
   };
 
   deleteNews = id => {
-    NewsManager.delete(id).then(news => {
-      this.props.history.push("/news");
-      this.setState({ news: news });
-    });
+    NewsManager.delete(id)
+      .then(NewsManager.getAll)
+      .then(news => {
+        this.props.history.push("/news");
+        this.setState({ news: news });
+      });
   };
 
-  addNews = news =>
-    NewsManager.post(news)
+  addNews = article =>
+    NewsManager.post(article)
       .then(() => NewsManager.getAll())
       .then(news =>
         this.setState({
@@ -37,6 +42,14 @@ class ApplicationViews extends Component {
   };
 
   componentDidMount() {
+    NewsManager.get(this.props.match.params.newsId).then(news => {
+      this.setState({
+        title: news.title,
+        synopsis: news.synopsis,
+        url: news.url
+      });
+    });
+
     NewsManager.getAll().then(allNews => {
       this.setState({
         news: allNews
@@ -60,9 +73,47 @@ class ApplicationViews extends Component {
             );
           }}
         />
+
+        <Route
+          path="/news/new"
+          render={props => {
+            return <NewsForm {...props} addNews={this.addNews} />;
+          }}
+        />
+
+        <Route
+          exact
+          path="/news/:newsId(\d+)"
+          render={props => {
+            let news = this.state.news.find(
+              news => news.id === parseInt(props.match.params.newsId)
+            );
+            if (!news) {
+              news = {
+                id: 404,
+                name: "404",
+                position: "News not found"
+              };
+            }
+            return <NewsDetail news={news} />;
+          }}
+        />
+
+        <Route
+          path="/news/:newsId(\d+)/edit"
+          render={props => {
+            return (
+              <NewsEditForm
+                {...props}
+                news={this.state.news}
+                updateNews={this.updateNews}
+              />
+            );
+          }}
+        />
       </>
     );
   }
 }
 
-export default ApplicationViews;
+export default withRouter(ApplicationViews);

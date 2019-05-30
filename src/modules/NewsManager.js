@@ -1,6 +1,9 @@
 const src = "http://localhost:5002";
 
 export default {
+  get(id) {
+    return fetch(`${src}/news/${id}`).then(e => e.json);
+  },
   getAll() {
     return fetch(`${src}/news`).then(e => e.json());
   },

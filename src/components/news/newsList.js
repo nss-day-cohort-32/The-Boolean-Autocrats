@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 class NewsList extends Component {
   render() {
@@ -7,14 +8,33 @@ class NewsList extends Component {
       <article>
         <h1>News</h1>
         <hr />
-        <Button color="primary">Add News Article</Button>
-        {/* dropdown form?? */}
+
+        <Button
+          color="primary"
+          type="button"
+          onClick={() => {
+            this.props.history.push("/news/new");
+          }}
+        >
+          Add News Article
+        </Button>
+
         {this.props.news.map(news => (
           <div key={news.id}>
             <h3>{news.title}</h3>
-            {/* Ask if the details for an article should be a seperate page if wanted to be enlarged */}
-            <p>{news.synopsis}</p>
-            <p>{news.url}</p>
+
+            <Button
+              color="info"
+              type="button"
+              onClick={() => {
+                this.props.history.push(`/news/${this.props.news.id}/edit`);
+              }}
+            >
+              Edit
+            </Button>
+
+            <Link to={`/news/${news.id}`}>Details</Link>
+
             <div>
               <Button
                 color="success"

@@ -5,7 +5,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" faded expand="md">
+        <Navbar color="dark" dark expand="md">
           <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href="/news">

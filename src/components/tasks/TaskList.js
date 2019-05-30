@@ -16,7 +16,7 @@ class TaskList extends Component {
             Add TaskList
           </button>
         </div>
-        {this.props.tasks.map(item => {})}
+        {/* {this.props.tasks.map(item => {})} */}
       </section>
     );
   }
