@@ -13,42 +13,26 @@
   ],
   "news": [
     {
-      "id": 1,
-      "title": "5 Broken Cameras",
-      "synopsis": "Services",
-      "url": "https://theatlantic.com/ac/nibh.html?massa=ligula&quis=pellentesque&augue=ultrices&luctus=phasellus&tincidunt=id&nulla=sapien&mollis=in&molestie=sapien&lorem=iaculis&quisque=congue&ut=vivamus&erat=metus&curabitur=arcu&gravida=adipiscing&nisi=molestie&at=hendrerit&nibh=at&in=vulputate&hac=vitae&habitasse=nisl&platea=aenean&dictumst=lectus&aliquam=pellentesque&augue=eget&quam=nunc&sollicitudin=donec&vitae=quis&consectetuer=orci&eget=eget&rutrum=orci&at=vehicula&lorem=condimentum&integer=curabitur&tincidunt=in&ante=libero&vel=ut&ipsum=massa&praesent=volutpat&blandit=convallis&lacinia=morbi&erat=odio&vestibulum=odio&sed=elementum&magna=eu&at=interdum&nunc=eu&commodo=tincidunt&placerat=in&praesent=leo&blandit=maecenas&nam=pulvinar&nulla=lobortis&integer=est&pede=phasellus&justo=sit&lacinia=amet&eget=erat&tincidunt=nulla&eget=tempus&tempus=vivamus&vel=in&pede=felis&morbi=eu&porttitor=sapien&lorem=cursus&id=vestibulum&ligula=proin&suspendisse=eu&ornare=mi&consequat=nulla&lectus=ac",
-      "userId": "1"
-    },
-    {
-      "id": 2,
-      "title": "Raging Bull",
-      "synopsis": "Legal",
-      "url": "http://indiatimes.com/sapien/cursus/vestibulum/proin/eu.html?metus=in&aenean=eleifend&fermentum=quam&donec=a&ut=odio&mauris=in&eget=hac&massa=habitasse&tempor=platea&convallis=dictumst&nulla=maecenas&neque=ut&libero=massa&convallis=quis&eget=augue&eleifend=luctus&luctus=tincidunt&ultricies=nulla&eu=mollis&nibh=molestie&quisque=lorem&id=quisque&justo=ut&sit=erat&amet=curabitur&sapien=gravida&dignissim=nisi&vestibulum=at&vestibulum=nibh&ante=in&ipsum=hac&primis=habitasse&in=platea&faucibus=dictumst&orci=aliquam&luctus=augue&et=quam&ultrices=sollicitudin&posuere=vitae&cubilia=consectetuer&curae=eget&nulla=rutrum&dapibus=at&dolor=lorem&vel=integer&est=tincidunt&donec=ante&odio=vel&justo=ipsum&sollicitudin=praesent&ut=blandit&suscipit=lacinia&a=erat&feugiat=vestibulum&et=sed&eros=magna&vestibulum=at&ac=nunc&est=commodo&lacinia=placerat&nisi=praesent&venenatis=blandit&tristique=nam&fusce=nulla&congue=integer&diam=pede&id=justo&ornare=lacinia&imperdiet=eget&sapien=tincidunt&urna=eget&pretium=tempus&nisl=vel&ut=pede&volutpat=morbi",
-      "userId": "2"
-    },
-    {
-      "id": 3,
-      "title": "Paris, Texas",
-      "synopsis": "Training",
-      "url": "http://photobucket.com/vestibulum/sit/amet/cursus.js?hac=vel&habitasse=nisl&platea=duis&dictumst=ac&maecenas=nibh&ut=fusce&massa=lacus&quis=purus&augue=aliquet&luctus=at&tincidunt=feugiat&nulla=non&mollis=pretium&molestie=quis&lorem=lectus&quisque=suspendisse&ut=potenti&erat=in&curabitur=eleifend&gravida=quam&nisi=a&at=odio&nibh=in&in=hac&hac=habitasse&habitasse=platea&platea=dictumst&dictumst=maecenas&aliquam=ut&augue=massa&quam=quis&sollicitudin=augue&vitae=luctus&consectetuer=tincidunt&eget=nulla&rutrum=mollis&at=molestie&lorem=lorem&integer=quisque&tincidunt=ut&ante=erat&vel=curabitur&ipsum=gravida&praesent=nisi&blandit=at&lacinia=nibh&erat=in&vestibulum=hac&sed=habitasse&magna=platea",
-      "userId": "2"
-    },
-    {
-      "id": 4,
-      "title": "Not Here to Be Loved (Je ne suis pas là pour être aimé)",
-      "synopsis": "Accounting",
-      "url": "https://go.com/amet/sem.png?in=vestibulum&lectus=ac&pellentesque=est&at=lacinia&nulla=nisi&suspendisse=venenatis&potenti=tristique&cras=fusce&in=congue&purus=diam&eu=id&magna=ornare&vulputate=imperdiet&luctus=sapien&cum=urna&sociis=pretium&natoque=nisl&penatibus=ut&et=volutpat&magnis=sapien&dis=arcu&parturient=sed&montes=augue&nascetur=aliquam&ridiculus=erat&mus=volutpat&vivamus=in&vestibulum=congue&sagittis=etiam&sapien=justo&cum=etiam&sociis=pretium&natoque=iaculis&penatibus=justo&et=in&magnis=hac&dis=habitasse&parturient=platea&montes=dictumst&nascetur=etiam&ridiculus=faucibus&mus=cursus&etiam=urna&vel=ut&augue=tellus&vestibulum=nulla&rutrum=ut&rutrum=erat&neque=id",
-      "userId": "2"
-    },
-    {
       "id": 5,
-      "title": "Blue Juice",
-      "synopsis": "Research and Development",
-      "url": "http://businesswire.com/tristique/in.xml?ipsum=vestibulum&praesent=sagittis&blandit=sapien&lacinia=cum&erat=sociis&vestibulum=natoque&sed=penatibus&magna=et&at=magnis&nunc=dis&commodo=parturient&placerat=montes&praesent=nascetur&blandit=ridiculus&nam=mus&nulla=etiam&integer=vel&pede=augue&justo=vestibulum&lacinia=rutrum&eget=rutrum&tincidunt=neque&eget=aenean&tempus=auctor&vel=gravida&pede=sem&morbi=praesent&porttitor=id&lorem=massa&id=id&ligula=nisl&suspendisse=venenatis&ornare=lacinia&consequat=aenean&lectus=sit&in=amet&est=justo&risus=morbi&auctor=ut&sed=odio&tristique=cras&in=mi&tempus=pede&sit=malesuada&amet=in&sem=imperdiet&fusce=et&consequat=commodo&nulla=vulputate&nisl=justo&nunc=in&nisl=blandit&duis=ultrices&bibendum=enim&felis=lorem&sed=ipsum&interdum=dolor&venenatis=sit&turpis=amet&enim=consectetuer&blandit=adipiscing&mi=elit&in=proin&porttitor=interdum&pede=mauris&justo=non&eu=ligula&massa=pellentesque&donec=ultrices&dapibus=phasellus&duis=id",
-      "userId": "2"
+      "title": "Raging Bull",
+      "synopsis": "Angry Boi running in the meadow",
+      "url": "http://www.google.com"
+    },
+    {
+      "title": "JR died",
+      "synopsis": "Why Spongebob whyyyy",
+      "url": "https://www.facebook.com",
+      "id": 8
     }
   ],
-  "events": [],
+  "events": [
+    {
+      "name": "Yes",
+      "date": "2019-01-01",
+      "location": "Nashville",
+      "id": 1
+    }
+  ],
   "tasks": [
     {
       "id": 1,
