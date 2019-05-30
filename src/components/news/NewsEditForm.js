@@ -30,10 +30,8 @@ class NewsEditForm extends Component {
         synopsis: this.state.synopsis,
         url: this.state.url
       };
-
       this.props
-        .updateNews(editedNews)
-        .then(() => this.props.history.push("/news"));
+      .updateNews(editedNews).then(() => this.props.history.push("/news"));
     }
   };
 
@@ -77,7 +75,7 @@ class NewsEditForm extends Component {
               type="text"
               required
               onChange={this.handleFieldChange}
-              id="title"
+              id="url"
               value={this.state.url}
             />
           </div>

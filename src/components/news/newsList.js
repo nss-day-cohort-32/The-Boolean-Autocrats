@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
-import { Link } from "react-router-dom";
 
 class NewsList extends Component {
   render() {
@@ -9,17 +8,19 @@ class NewsList extends Component {
         <h1>News</h1>
         <hr />
 
-        <Button
-          color="primary"
-          type="button"
-          onClick={() => {
-            this.props.history.push("/news/new");
-          }}
-        >
-          Add News Article
-        </Button>
+        <div>
+          <Button
+            color="primary"
+            type="button"
+            onClick={() => {
+              this.props.history.push("/news/new");
+            }}
+          >
+            Add News Article
+          </Button>
+        </div>
 
-        {this.props.news.map(news => (
+        {this.props.allNews.map(news => (
           <div key={news.id}>
             <h3>{news.title}</h3>
 
@@ -27,14 +28,20 @@ class NewsList extends Component {
               color="info"
               type="button"
               onClick={() => {
-                this.props.history.push(`/news/${this.props.news.id}/edit`);
+                this.props.history.push(`/news/${news.id}/edit`);
               }}
             >
               Edit
             </Button>
 
             <div>
-              <Link to={`/news/${news.id}`}>Details</Link>
+              <Button
+                onClick={() => {
+                  this.props.history.push(`/news/${news.id}`);
+                }}
+              >
+                Details
+              </Button>
             </div>
 
             <div>
@@ -46,6 +53,7 @@ class NewsList extends Component {
                 Delete News Article
               </Button>
             </div>
+            <hr />
           </div>
         ))}
       </article>
