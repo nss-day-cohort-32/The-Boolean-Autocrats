@@ -48,32 +48,7 @@
       "userId": "2"
     }
   ],
-  "events": [
-    {
-      "id": 6,
-      "name": "Jr's Funeral 2",
-      "date": "2019-05-29",
-      "location": "Palm Beach"
-    },
-    {
-      "name": "Desert Willow",
-      "date": "2019-05-08",
-      "location": "nashville 1",
-      "id": 11
-    },
-    {
-      "id": 12,
-      "name": "Robby birth",
-      "date": "1978-12-04",
-      "location": "Michigan"
-    },
-    {
-      "name": "Picnic",
-      "date": "2019-05-29",
-      "location": "Nashville Tn",
-      "id": 13
-    }
-  ],
+  "events": [],
   "tasks": [
     {
       "id": 1,

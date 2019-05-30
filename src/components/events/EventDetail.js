@@ -5,7 +5,13 @@ export default class Event extends Component {
     state = {
         saveDisabled: false
     }
+deleteEvent = () => {
+    this.props.deleteEvent(this.props.event.id)
+    .then(() => {
+        this.props.history.push("/events")
+    })
 
+}
     render() {
         console.log("props", this.props)
         return (
@@ -19,14 +25,9 @@ export default class Event extends Component {
                         <h3 className="card-title">{ this.props.event.location }</h3>
 
                         <button onClick={
-                                () => {
-                                    this.setState(
-                                        { saveDisabled: true },
-                                        () => this.props.deleteEvent(this.props.event.id)
-                                    )
-                                }
+                                () => this.deleteEvent()
                             }
-                            disabled={ this.state.saveDisabled }
+                            
                             className="card-link">Delete</button>
                     </div>
                 </div>

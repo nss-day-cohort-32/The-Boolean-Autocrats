@@ -1,12 +1,11 @@
-import { Route, Redirect } from 'react-router-dom'
-import { withRouter } from 'react-router'
+import { Route} from 'react-router-dom'
 import React, { Component } from "react"
 import EventManager from '../modules/EventManager';
 import EventDetail from './events/EventDetail'
 import EventList from './events/EventList'
 import EventForm from './events/EventForm'
 import EventEditForm from './events/EventEditForm'
-import NewsList from "./news/newsList";
+import NewsList from "./news/NewsList";
 // import NewForm from "./news/NewsForm";
 import NewsManager from "../modules/NewsManager";
 
@@ -29,15 +28,16 @@ class ApplicationViews extends Component {
 
 
   deleteEvent = (id) => {
+    console.log("props", this.props.history)
     const newState = {};
-    EventManager.deleteEvent(id)
-      .then(EventManager.getAll)
+    return EventManager.deleteEvent(id)
+      .then(()=> EventManager.getAll())
       .then(events => {
         console.log("events", events);
         newState.events = events
       })
       .then(() => {
-        this.props.history.push("/events")
+
         this.setState(newState)
       })
   }
