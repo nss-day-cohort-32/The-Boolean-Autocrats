@@ -27,36 +27,7 @@
       "userId": "2"
     }
   ],
-  "events": [
-    {
-      "id": 2,
-      "name": "Cheesewood",
-      "date": "8/6/2018",
-      "location": "0 Dawn Road",
-      "userId": "1"
-    },
-    {
-      "id": 3,
-      "name": "Elmleaf Goldenrod",
-      "date": "2/18/2019",
-      "location": "1980 Forest Avenue",
-      "userId": "2"
-    },
-    {
-      "id": 4,
-      "name": "Desert Willow",
-      "date": "1/27/2019",
-      "location": "7 Sloan Point",
-      "userId": "1"
-    },
-    {
-      "id": 5,
-      "name": "Wisteria",
-      "date": "4/21/2019",
-      "location": "60 1st Way",
-      "userId": "2"
-    }
-  ],
+  "events": [],
   "tasks": [
     {
       "id": 1,
@@ -69,11 +40,6 @@
       "name": "Beibei",
       "info": "8 Katie Lane",
       "userId": "2"
-    },
-    {
-      "name": "poop",
-      "info": "more poop",
-      "id": 3
     }
   ],
   "friends": [
