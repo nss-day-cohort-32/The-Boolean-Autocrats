@@ -29,13 +29,6 @@
   ],
   "events": [
     {
-      "id": 1,
-      "name": "Caribbean Pygmymelon",
-      "date": "8/10/2018",
-      "location": "17679 Chinook Road",
-      "userId": "1"
-    },
-    {
       "id": 2,
       "name": "Cheesewood",
       "date": "8/6/2018",
@@ -75,12 +68,6 @@
       "id": 2,
       "name": "Beibei",
       "info": "8 Katie Lane",
-      "userId": "2"
-    },
-    {
-      "id": 3,
-      "name": "Stockholm",
-      "info": "73 Pond Road",
       "userId": "2"
     }
   ],

@@ -6,7 +6,7 @@ export default {
 
     },
     delete(id) {
-        return fetch(`${src}/task/${id}`, {
+        return fetch(`${src}/tasks/${id}`, {
             method: "DELETE"
         }).then(e => e.json())
     },

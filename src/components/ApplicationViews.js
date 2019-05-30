@@ -6,7 +6,7 @@ import EventDetail from './events/EventDetail'
 import EventList from './events/EventList'
 import EventForm from './events/EventForm'
 import EventEditForm from './events/EventEditForm'
-import NewsList from "./news/newsList";
+import NewsList from "./news/NewsList";
 // import NewForm from "./news/NewsForm";
 import NewsManager from "../modules/NewsManager";
 import TaskManager from "../modules/TaskManager"
@@ -218,4 +218,4 @@ class ApplicationViews extends Component {
 
 
 
-export default ApplicationViews;
+export default withRouter(ApplicationViews);
