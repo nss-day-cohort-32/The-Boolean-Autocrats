@@ -6,7 +6,7 @@ import EventDetail from "./events/EventDetail";
 import EventList from "./events/EventList";
 import EventForm from "./events/EventForm";
 import EventEditForm from "./events/EventEditForm";
-import XNewsList from "./news/XNewsList";
+import XNewsList from "./news/NewsList";
 import NewsEditForm from "./news/NewsEditForm";
 import NewsManager from "../modules/NewsManager";
 import NewsForm from "./news/NewsForm";
