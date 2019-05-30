@@ -1,4 +1,4 @@
-import { Route, Redirect } from 'react-router-dom'
+import { Route, /*Redirect*/ } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import React, { Component } from "react"
 import EventManager from '../modules/EventManager';
