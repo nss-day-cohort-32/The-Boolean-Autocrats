@@ -1,5 +1,4 @@
 
-import { Link } from "react-router-dom"
 import React from "react";
 import { Navbar, NavItem, NavLink, Nav } from "reactstrap";
 
@@ -7,12 +6,12 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" faded expand="md">
+        <Navbar color="dark" dark expand="md">
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/news">
-                <h4>News</h4>
-              </NavLink>
+             <NavLink href="/news">
+               <h4>News</h4>
+             </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/events">
