@@ -33,7 +33,9 @@ class NewsList extends Component {
               Edit
             </Button>
 
-            <Link to={`/news/${news.id}`}>Details</Link>
+            <div>
+              <Link to={`/news/${news.id}`}>Details</Link>
+            </div>
 
             <div>
               <Button

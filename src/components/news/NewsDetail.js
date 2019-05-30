@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
-
+// import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 class News extends Component {
   render() {
     return (
       <section>
         <div key={this.props.news.id}>
-          <h3>{this.props.news.name}</h3>
+          <h3>{this.props.news.title}</h3>
           <p>{this.props.news.synopsis}</p>
-          <a href={this.props.news.url}>News</a>
-          <Button color="primary" onClick={this.props.history.push("/news")}>
+          <Link to={this.props.news.url}>News Link</Link>
+
+          {/* <Button color="primary" onClick={this.props.history.push("/news")}>
             Back
-          </Button>
+          </Button> */}
         </div>
       </section>
     );

@@ -102,13 +102,7 @@ class ApplicationViews extends Component {
         <Route
           path="/news/:newsId(\d+)/edit"
           render={props => {
-            return (
-              <NewsEditForm
-                {...props}
-                news={this.state.news}
-                updateNews={this.updateNews}
-              />
-            );
+            return <NewsEditForm {...props} updateNews={this.updateNews} />;
           }}
         />
       </>
