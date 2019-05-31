@@ -26,6 +26,11 @@ class NavBar extends React.Component {
             </NavItem>
             <NavItem>
               <Link to="/friends">
+                <h4 className="navigation-link">Chat</h4>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/friends">
                 <h4 className="navigation-link">Friends</h4>
               </Link>
             </NavItem>
