@@ -7,14 +7,43 @@ class NewsList extends Component {
       <article>
         <h1>News</h1>
         <hr />
-        <Button color="primary">Add News Article</Button>
-        {/* dropdown form?? */}
-        {this.props.news.map(news => (
+
+        <div>
+          <Button
+            color="primary"
+            type="button"
+            onClick={() => {
+              this.props.history.push("/news/new");
+            }}
+          >
+            Add News Article
+          </Button>
+        </div>
+
+        {this.props.allNews.map(news => (
           <div key={news.id}>
             <h3>{news.title}</h3>
-            {/* Ask if the details for an article should be a seperate page if wanted to be enlarged */}
-            <p>{news.synopsis}</p>
-            <p>{news.url}</p>
+
+            <Button
+              color="info"
+              type="button"
+              onClick={() => {
+                this.props.history.push(`/news/${news.id}/edit`);
+              }}
+            >
+              Edit
+            </Button>
+
+            <div>
+              <Button
+                onClick={() => {
+                  this.props.history.push(`/news/${news.id}`);
+                }}
+              >
+                Details
+              </Button>
+            </div>
+
             <div>
               <Button
                 color="success"
@@ -24,6 +53,7 @@ class NewsList extends Component {
                 Delete News Article
               </Button>
             </div>
+            <hr />
           </div>
         ))}
       </article>

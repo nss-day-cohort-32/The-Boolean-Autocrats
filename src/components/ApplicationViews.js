@@ -1,53 +1,40 @@
-import { withRouter } from 'react-router'
-import { Route } from 'react-router-dom'
-import React, { Component } from "react"
-import EventManager from '../modules/EventManager';
-import EventDetail from './events/EventDetail'
-import EventList from './events/EventList'
-import EventForm from './events/EventForm'
-import EventEditForm from './events/EventEditForm'
-import NewsList from "./news/NewsList";
-// import NewForm from "./news/NewsForm";
+import { Route } from "react-router-dom";
+import React, { Component } from "react";
+import { withRouter } from "react-router";
+import EventManager from "../modules/EventManager";
+import EventDetail from "./events/EventDetail";
+import EventList from "./events/EventList";
+import EventForm from "./events/EventForm";
+import EventEditForm from "./events/EventEditForm";
+import NewsEditForm from "./news/NewsEditForm";
 import NewsManager from "../modules/NewsManager";
+import NewsForm from "./news/NewsForm";
+import NewsList from "./news/NewsList"
+import NewsDetail from "./news/NewsDetail";
+import TaskForm from "./tasks/TaskForm";
+import TaskList from "./tasks/TaskList";
 import TaskManager from "../modules/TaskManager"
-import TaskList from "./tasks/TaskList"
-import TaskForm from "./tasks/TaskForm"
-
-
-
-
 
 class ApplicationViews extends Component {
-
   state = {
     news: [],
     tasks: [],
     events: []
-
-
-
   }
 
-
-
-
-
-
-  deleteEvent = (id) => {
-    console.log("props", this.props.history)
+  deleteEvent = id => {
+    console.log("props", this.props.history);
     const newState = {};
     return EventManager.deleteEvent(id)
       .then(() => EventManager.getAll())
       .then(events => {
         console.log("events", events);
-        newState.events = events
+        newState.events = events;
       })
       .then(() => {
-
-        this.setState(newState)
-      })
-  }
-
+        this.setState(newState);
+      });
+  };
 
   addEvent = event =>
     EventManager.post(event)
@@ -58,23 +45,23 @@ class ApplicationViews extends Component {
         })
       );
 
-
-  updateEvent = (editedEventObject) => {
+  updateEvent = editedEventObject => {
     return EventManager.put(editedEventObject)
       .then(() => EventManager.getAll())
       .then(events => {
         this.setState({
           events: events
-        })
+        });
       });
   };
 
-
   deleteNews = id => {
-    NewsManager.delete(id).then(news => {
-      this.props.history.push("/news");
-      this.setState({ news: news });
-    });
+    NewsManager.delete(id)
+      .then(NewsManager.getAll)
+      .then(news => {
+        this.props.history.push("/news");
+        this.setState({ news: news });
+      });
   };
 
   deleteTask = id => {
@@ -95,8 +82,9 @@ class ApplicationViews extends Component {
         })
       );
 
-  addNews = news =>
-    NewsManager.post(news)
+
+  addNews = article =>
+    NewsManager.post(article)
       .then(() => NewsManager.getAll())
       .then(news =>
         this.setState({
@@ -105,7 +93,7 @@ class ApplicationViews extends Component {
       );
 
   updateNews = editedNewsObject => {
-    return NewsManager.put(editedNewsObject)
+    return NewsManager.edit(editedNewsObject)
       .then(() => NewsManager.getAll())
       .then(news => {
         this.setState({
@@ -114,12 +102,10 @@ class ApplicationViews extends Component {
       });
   };
 
-
-
   componentDidMount() {
-    NewsManager.getAll().then(allNews => {
+    NewsManager.getAll().then(news => {
       this.setState({
-        news: allNews
+        news: news
       });
     });
     TaskManager.getAll().then(allTasks => {
@@ -148,20 +134,7 @@ class ApplicationViews extends Component {
   render() {
     return (
       <>
-        <Route
-          exact
-          path="/news"
-          render={props => {
-            return (
-              <NewsList
-                {...props}
-                news={this.state.news}
-                deleteNews={this.deleteNews}
-              />
 
-            );
-          }}
-        />
         <Route exact path="/tasks" render={props => {
           return (
             <TaskList
@@ -177,11 +150,7 @@ class ApplicationViews extends Component {
             deleteEvent={this.deleteEvent}
             events={this.state.events} />
         }} />
-        <Route path="/events/new" render={(props) => {
-          return <EventForm {...props}
-            addEvent={this.addEvent} />
 
-        }} />
         <Route path="/tasks/new" render={(props) => {
           return <TaskForm {...props}
             addTask={this.addTask} />
@@ -209,28 +178,61 @@ class ApplicationViews extends Component {
           return <EventEditForm {...props} updateEvent={this.updateEvent} />
         }}
         />
-        <Route exact path="/news" render={props => {
-          return (
-            <NewsList {...props}
-              news={this.state.news}
-              deleteNews={this.deleteNews}
-            />
-          );
-        }}
+        <Route
+          path="/events/new"
+          render={props => {
+            return <EventForm {...props} addEvent={this.addEvent} />;
+          }}
         />
 
+        <Route
+          exact
+          path="/news"
+          render={props => {
+            return (
+              <NewsList
+                {...props}
+                allNews={this.state.news}
+                deleteNews={this.deleteNews}
+              />
+            );
+          }}
+        />
 
+        <Route
+          path="/news/new"
+          render={props => {
+            return <NewsForm {...props} addNews={this.addNews} />;
+          }}
+        />
 
+        <Route
+          exact
+          path="/news/:newsId(\d+)"
+          render={props => {
+            let news = this.state.news.find(
+              news => news.id === parseInt(props.match.params.newsId)
+            );
+            if (!news) {
+              news = {
+                id: 404,
+                name: "404",
+                position: "News not found"
+              };
+            }
+            return <NewsDetail news={news} />;
+          }}
+        />
 
-
-
+        <Route
+          path="/news/:newsId(\d+)/edit"
+          render={props => {
+            return <NewsEditForm {...props} updateNews={this.updateNews} />;
+          }}
+        />
       </>
-    )
+    );
   }
 }
-
-
-
-
 
 export default withRouter(ApplicationViews);

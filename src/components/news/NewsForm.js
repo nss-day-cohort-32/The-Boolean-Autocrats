@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class NewsForm extends Component {
   state = {
-    newsTitle: "",
+    title: "",
     synopsis: "",
     url: ""
   };
@@ -15,12 +15,21 @@ class NewsForm extends Component {
 
   constructNews = evt => {
     evt.preventDefault();
-    const news = {
-      title: this.state.newsTitle,
-      synopsis: this.state.synopsis,
-      url: this.state.url
-    };
-    this.props.addNews(news).then(() => this.props.history.push("/news"));
+    if (
+      this.state.title === "" ||
+      this.state.synopsis === "" ||
+      this.state.url === ""
+    ) {
+      window.alert("Please fill in the input fields.");
+    } else {
+      const news = {
+        title: this.state.title,
+        synopsis: this.state.synopsis,
+        url: this.state.url
+      };
+      this.props.addNews(news);
+      this.props.history.push("/news");
+    }
   };
 
   render() {
@@ -28,17 +37,17 @@ class NewsForm extends Component {
       <>
         <form>
           <div>
-            <label htmlFor="newsTitle">Title:</label>
+            <label htmlFor="title">Title: </label>
             <input
               type="text"
               required
               onChange={this.handleFieldChange}
-              id="newsTitle"
+              id="title"
               placeholder="Title . . ."
             />
           </div>
           <div>
-            <label htmlFor="synopsis">Synopsis:</label>
+            <label htmlFor="synopsis">Synopsis: </label>
             <input
               type="text"
               required
@@ -48,7 +57,7 @@ class NewsForm extends Component {
             />
           </div>
           <div>
-            <label htmlFor="url">URL:</label>
+            <label htmlFor="url">URL: </label>
             <input
               type="text"
               required

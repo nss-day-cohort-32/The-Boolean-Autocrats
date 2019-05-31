@@ -1,7 +1,8 @@
 
 import React from "react";
-import { Navbar, NavItem, NavLink, Nav } from "reactstrap";
-
+import { Navbar, NavItem, Nav } from "reactstrap";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 class NavBar extends React.Component {
   render() {
     return (
@@ -9,24 +10,24 @@ class NavBar extends React.Component {
         <Navbar color="dark" dark expand="md">
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/news">
-                <h4>News</h4>
-              </NavLink>
+              <Link to="/news">
+                <h4 className="navigation-link">News</h4>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/events">
-                <h4>Events</h4>
-              </NavLink>
+              <Link to="/events">
+                <h4 className="navigation-link">Events</h4>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/tasks">
-                <h4>Tasks</h4>
-              </NavLink>
+              <Link to="/tasks">
+                <h4 className="navigation-link">Tasks</h4>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink href="/friends">
-                <h4>Friends</h4>
-              </NavLink>
+              <Link to="/friends">
+                <h4 className="navigation-link">Friends</h4>
+              </Link>
             </NavItem>
           </Nav>
         </Navbar>
