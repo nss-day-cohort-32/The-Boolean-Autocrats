@@ -15,6 +15,9 @@ import TaskForm from "./tasks/TaskForm";
 import TaskList from "./tasks/TaskList";
 import TaskManager from "../modules/TaskManager"
 
+import Register from "./userlogin/Register";
+import Login from "./userlogin/Login";
+
 class ApplicationViews extends Component {
   state = {
     news: [],
@@ -22,6 +25,15 @@ class ApplicationViews extends Component {
     events: []
   }
 
+  deleteNews = (id) => {
+    NewsManager.delete(id).then((news) => {
+      this.props.history.push("/news");
+      this.setState({ news: news });
+    });
+  };
+
+  addNews = (news) =>
+    NewsManager.post(news)
   deleteEvent = id => {
     console.log("props", this.props.history);
     const newState = {};
@@ -86,16 +98,17 @@ class ApplicationViews extends Component {
   addNews = article =>
     NewsManager.post(article)
       .then(() => NewsManager.getAll())
-      .then(news =>
+      .then((news) =>
         this.setState({
           news: news
         })
       );
 
+
   updateNews = editedNewsObject => {
     return NewsManager.edit(editedNewsObject)
       .then(() => NewsManager.getAll())
-      .then(news => {
+      .then((news) => {
         this.setState({
           news: news
         });
@@ -176,8 +189,37 @@ class ApplicationViews extends Component {
 
         <Route path="/events/:eventId(\d+)/edit" render={props => {
           return <EventEditForm {...props} updateEvent={this.updateEvent} />
-        }}
+        }} />
+        <Route
+          path="/register"
+          render={(props) => {
+            return (
+              <Register
+                {...props}
+                addUser={this.props.addUser}
+                users={this.props.users}
+                registerIt={this.props.registerIt}
+                getAll={this.props.getAllUsers}
+              />
+            );
+          }}
         />
+
+        <Route
+          exact
+          path="/"
+          render={(props) => {
+            return (
+              <Login
+                {...props}
+                populateAppState={this.props.populateAppState}
+                registerIt={this.props.registerIt}
+              />
+            );
+          }}
+        />
+
+
         <Route
           path="/events/new"
           render={props => {
@@ -188,7 +230,7 @@ class ApplicationViews extends Component {
         <Route
           exact
           path="/news"
-          render={props => {
+          render={(props) => {
             return (
               <NewsList
                 {...props}
