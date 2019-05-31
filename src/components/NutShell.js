@@ -15,6 +15,7 @@ export default class Nutshell extends Component {
       this.setState({ users: users });
     });
   }
+
   componentDidMount() {
     this.populateAppState();
   }
