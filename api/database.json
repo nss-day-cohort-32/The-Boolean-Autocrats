@@ -55,26 +55,25 @@
   ],
   "news": [
     {
-      "id": 5,
-      "title": "Raging Bull",
-      "synopsis": "Angry Boi running in the meadow",
-      "url": "http://www.google.com"
+      "userName": "asfd",
+      "password": "asdf",
+      "id": 9
     },
     {
-      "title": "JR died",
-      "synopsis": "Why Spongebob whyyyy",
-      "url": "https://www.facebook.com",
-      "id": 8
+      "userName": "asdf",
+      "password": "asdf",
+      "id": 10
     }
   ],
-  "events": [
+  "news": [
     {
-      "name": "Yes",
-      "date": "2019-01-01",
-      "location": "Nashville",
-      "id": 1
+      "id": 8,
+      "title": "JR diedff",
+      "synopsis": "Why Spongebob whyyyy",
+      "url": "https://www.facebook.com"
     }
   ],
+  "events": [],
   "tasks": [
     {
       "id": 1,
@@ -86,12 +85,6 @@
       "id": 2,
       "name": "Beibei",
       "info": "8 Katie Lane",
-      "userId": "2"
-    },
-    {
-      "id": 3,
-      "name": "Stockholm",
-      "info": "73 Pond Road",
       "userId": "2"
     }
   ],
