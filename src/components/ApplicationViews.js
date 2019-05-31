@@ -110,6 +110,8 @@ class ApplicationViews extends Component {
             );
           }}
         />
+         
+        
         <Route
           path="/events/new"
           render={props => {

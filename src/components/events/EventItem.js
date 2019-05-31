@@ -27,6 +27,9 @@ class EventItem extends Component {
                 < Link className="nav-link" to={`/events/${this.props.event.id}`}><button type="button">
           Detail
      </button></Link>
+     < Link className="nav-link" to={`/events/${this.props.event.id}`}><button type="button">
+          Favorite
+     </button></Link>
                 <button
                     type="button"
                     className="btn btn-success"
