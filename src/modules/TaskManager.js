@@ -5,6 +5,9 @@ export default {
         return fetch(`${src}/tasks`).then(e => e.json());
 
     },
+    get(id) {
+        return fetch(`${src}/tasks/${id}`).then(e => e.json())
+    },
     delete(id) {
         return fetch(`${src}/tasks/${id}`, {
             method: "DELETE"
@@ -19,13 +22,13 @@ export default {
             body: JSON.stringify(tasks)
         }).then(e => e.json())
     },
-    edit(editTasks) {
-        return fetch(`${src}/tasks/${editTasks.id}`, {
+    edit(editTask) {
+        return fetch(`${src}/tasks/${editTask.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(editTasks)
+            body: JSON.stringify(editTask)
         }).then(e => e.json())
     }
 }

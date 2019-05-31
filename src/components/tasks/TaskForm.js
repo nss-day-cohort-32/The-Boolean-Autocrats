@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from "reactstrap"
+import { Button, Card } from "reactstrap"
 
 class TaskForm extends Component {
 
@@ -24,31 +24,33 @@ class TaskForm extends Component {
     render() {
         return (
             <>
-                <form>
-                    <div>
-                        <label htmlFor="name">Name</label>
-                        <input
-                            type="text"
-                            required
-                            onChange={this.handelFieldChange}
-                            id="name"
-                            placeholder="name"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="info">Info</label>
-                        <input
-                            type="text"
-                            required
-                            onChange={this.handelFieldChange}
-                            id="info"
-                            placeholder="info"
-                        />
-                    </div>
-                    <Button className="primary"
-                        type="submit"
-                        onClick={this.ConstructTask}>Save</Button>
-                </form>
+                <Card>
+                    <form>
+                        <div>
+                            <label htmlFor="name">Name</label>
+                            <input
+                                type="text"
+                                required
+                                onChange={this.handelFieldChange}
+                                id="name"
+                                placeholder="name"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="info">Info</label>
+                            <input
+                                type="text"
+                                required
+                                onChange={this.handelFieldChange}
+                                id="info"
+                                placeholder="info"
+                            />
+                        </div>
+                        <Button className="primary"
+                            type="submit"
+                            onClick={this.ConstructTask}>Save</Button>
+                    </form>
+                </Card>
             </>
         );
     }

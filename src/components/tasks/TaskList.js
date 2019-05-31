@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from 'reactstrap'
+import { Button, Calender } from 'reactstrap'
 
 class TaskList extends Component {
   render() {
@@ -19,6 +19,10 @@ class TaskList extends Component {
                 size="sm"
                 onClick={() => this.props.deleteTask(task.id)}>Delete Task
             </Button>
+              <Button
+                color="danger"
+                size="sm"
+                onClick={() => this.props.history.push(`/tasks/${task.id}/editForm`)}>Edit</Button>
             </div>
           </div>
         ))}

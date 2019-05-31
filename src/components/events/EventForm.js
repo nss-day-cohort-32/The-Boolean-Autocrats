@@ -23,20 +23,20 @@ export default class EventForm extends Component {
     constructNewEvent = evt => {
         evt.preventDefault();
 
-            const event = {
-                name: this.state.eventName,
-                date: this.state.date,
-                location:this.state.location,
-                
-                
-            };
+        const event = {
+            name: this.state.eventName,
+            date: this.state.date,
+            location: this.state.location,
 
-            // Create the event and redirect user to event list
-            this.props
-                .addEvent(event)
-                .then(() => this.props.history.push("/events"));
-        }
-    
+
+        };
+
+        // Create the event and redirect user to event list
+        this.props
+            .addEvent(event)
+            .then(() => this.props.history.push("/events"));
+    }
+
 
     render() {
         return (
