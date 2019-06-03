@@ -4,12 +4,13 @@ export default class ChatBox extends Component {
   render() {
     return (
       <React.Fragment>
-        <section className="">
+        <center><section className="ChatBox">
           {this.props.chat.map((chat) => (
             <div key={chat.id} className="">
               <hr />
               {chat.message}
               <hr />
+             
               <button
                 type=""
                 className=""
@@ -27,7 +28,7 @@ export default class ChatBox extends Component {
               </button>
             </div>
           ))}
-        </section>
+        </section></center>
       </React.Fragment>
     );
   }

@@ -37,7 +37,7 @@ export default class ChatEdit extends Component {
   render() {
     return (
       <React.Fragment>
-        <form className="">
+       <center> <form className="ChatEdit">
           <div className="">
             <label htmlFor="message">Message</label>
             <input
@@ -50,9 +50,9 @@ export default class ChatEdit extends Component {
             />
           </div>
           <button type="submit" onClick={this.editMessage} className="">
-            Save
+            Save Edit
           </button>
-        </form>
+        </form></center>
       </React.Fragment>
     );
   }
