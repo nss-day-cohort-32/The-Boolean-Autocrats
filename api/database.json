@@ -61,18 +61,47 @@
       "userName": "SD",
       "password": "SD",
       "id": 12
+    },
+    {
+      "userName": "NSS",
+      "password": "12345",
+      "id": 13
     }
   ],
   "news": [
     {
       "id": 10,
-      "title": "jrFUNERAL:(",
-      "synopsis": "SORRYMAN",
+      "title": "BBC NEWS",
+      "synopsis": "NSS",
       "url": "http://google.com"
     }
   ],
-  "chat": [],
-  "events": [],
+  "chat": [
+    {
+      "message": "",
+      "id": 2
+    },
+    {
+      "message": "Hey there!",
+      "id": 3
+    },
+    {
+      "message": "AAAA",
+      "id": 4
+    },
+    {
+      "message": "AAAA",
+      "id": 5
+    }
+  ],
+  "events": [
+    {
+      "name": "Party Tonight",
+      "date": "2022-11-11",
+      "location": "Hawaii",
+      "id": 1
+    }
+  ],
   "tasks": [
     {
       "id": 1,
@@ -80,10 +109,9 @@
       "info": "15248 Everett Pass"
     },
     {
-      "name": "SD",
-      "info": "SD",
-      "date": "2019-06-03T16:19:58.777Z",
-      "id": 3
+      "id": 3,
+      "name": "Groceries",
+      "info": "Banana"
     }
   ],
   "friends": [
