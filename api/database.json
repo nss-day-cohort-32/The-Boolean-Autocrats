@@ -43,37 +43,47 @@
       "id": 8
     },
     {
-      "userName": "asfd",
-      "password": "asdf",
+      "userName": "bbbbb",
+      "password": "bbbbb",
       "id": 9
     },
     {
-      "userName": "asdf",
-      "password": "asdf",
+      "userName": "ggg",
+      "password": "ggg",
       "id": 10
+    },
+    {
+      "userName": "22",
+      "password": "22",
+      "id": 11
+    },
+    {
+      "userName": "SD",
+      "password": "SD",
+      "id": 12
     }
   ],
   "news": [
     {
-      "id": 8,
-      "title": "JR diedff",
-      "synopsis": "Why Spongebob whyyyy",
-      "url": "https://www.facebook.com"
+      "id": 10,
+      "title": "jrFUNERAL:(",
+      "synopsis": "SORRYMAN",
+      "url": "http://google.com"
     }
   ],
+  "chat": [],
   "events": [],
   "tasks": [
     {
       "id": 1,
       "name": "Petrijevci",
-      "info": "15248 Everett Pass",
-      "userId": "2"
+      "info": "15248 Everett Pass"
     },
     {
-      "id": 2,
-      "name": "Beibei",
-      "info": "8 Katie Lane",
-      "userId": "2"
+      "name": "SD",
+      "info": "SD",
+      "date": "2019-06-03T16:19:58.777Z",
+      "id": 3
     }
   ],
   "friends": [

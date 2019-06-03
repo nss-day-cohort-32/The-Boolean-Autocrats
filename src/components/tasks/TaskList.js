@@ -12,19 +12,23 @@ class TaskList extends Component {
           <div key={task.id}>
             <h3>{task.name}</h3>
             <h3>{task.info}</h3>
-
+ 
             <div>
               <Button
                 color="success"
                 size="sm"
                 onClick={() => this.props.deleteTask(task.id)}>Delete Task
             </Button>
+              <Button
+                color="danger"
+                size="sm"
+                onClick={() => this.props.history.push(`/tasks/${task.id}/editForm`)}>Edit</Button>
             </div>
           </div>
         ))}
       </article>
     );
   }
-}
-
-export default TaskList;
+ }
+ 
+ export default TaskList;
