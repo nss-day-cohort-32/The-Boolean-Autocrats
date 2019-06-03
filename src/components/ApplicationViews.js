@@ -18,6 +18,7 @@ import NewsDetail from "./news/NewsDetail";
 import TaskForm from "./tasks/TaskForm";
 import TaskList from "./tasks/TaskList";
 import TaskManager from "../modules/TaskManager";
+import TaskEditForm from "./tasks/TaskEditForm"
 
 import Register from "./userlogin/Register";
 import Login from "./userlogin/Login";
@@ -134,6 +135,15 @@ class ApplicationViews extends Component {
           news: news
         })
       );
+      updateTasks = editedTaskObject => {
+        return TaskManager.edit(editedTaskObject)
+          .then(() => TaskManager.getAll())
+          .then(tasks => {
+            this.setState({
+              tasks: tasks
+            })
+          })
+      }
 
   updateNews = (editedNewsObject) => {
     return NewsManager.edit(editedNewsObject)
@@ -210,7 +220,10 @@ class ApplicationViews extends Component {
             );
           }}
         />
-
+<Route path="/tasks/:taskId(\d+)/editForm"
+ render={props => {
+         return <TaskEditForm {...props} updateTasks={this.updateTasks} />
+       }} />
         <Route
           exact
           path="/tasks"

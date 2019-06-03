@@ -1,6 +1,10 @@
 const src = "http://localhost:5002";
 
 export default {
+    
+    get(id) {
+        return fetch(`${src}/tasks/${id}`).then(e => e.json());
+    },
     getAll() {
         return fetch(`${src}/tasks`).then(e => e.json());
 
@@ -19,13 +23,13 @@ export default {
             body: JSON.stringify(tasks)
         }).then(e => e.json())
     },
-    edit(editTasks) {
-        return fetch(`${src}/tasks/${editTasks.id}`, {
+    edit(editTask) {
+        return fetch(`${src}/tasks/${editTask.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(editTasks)
+            body: JSON.stringify(editTask)
         }).then(e => e.json())
     }
 }
