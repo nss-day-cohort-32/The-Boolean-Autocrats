@@ -51,18 +51,11 @@
       "userName": "ggg",
       "password": "ggg",
       "id": 10
-    }
-  ],
-  "news": [
-    {
-      "userName": "asfd",
-      "password": "asdf",
-      "id": 9
     },
     {
-      "userName": "asdf",
-      "password": "asdf",
-      "id": 10
+      "userName": "22",
+      "password": "22",
+      "id": 11
     }
   ],
   "news": [
@@ -73,7 +66,20 @@
       "url": "https://www.facebook.com"
     }
   ],
-  "events": [],
+  "chat": [
+    {
+      "id": 1,
+      "message": "tttttt"
+    }
+  ],
+  "events": [
+    {
+      "name": "",
+      "date": "",
+      "location": "",
+      "id": 1
+    }
+  ],
   "tasks": [
     {
       "id": 1,

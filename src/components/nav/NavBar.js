@@ -8,7 +8,7 @@ class NavBar extends React.Component {
         <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="/chat">
+              <a className="nav-link" href="/chatroom">
                 Home
               </a>
             </li>
