@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TaskManager from "../../modules/TaskManager"
-import { Button, Card, Row, Col } from "reactstrap"
+import { Button, Card, Col } from "reactstrap"
 
 
 export default class TaskEditForm extends Component {

@@ -24,7 +24,7 @@ export default class ChatBox extends Component {
                 className=""
                 onClick={() => this.props.deleteMessages(chat.id)}
               >
-                Delete
+                Delete it
               </button>
             </div>
           ))}
