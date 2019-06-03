@@ -1,7 +1,11 @@
-<img src="readme.gif">
+
 
 
 # The-Boolean-Autocrats
+
+<img src="readme.gif">
+
+
 This project is a basic application representing something like Facebook. It provides data to keep for your tasks, share news and events, as well as add friends, and message people in a chat.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
