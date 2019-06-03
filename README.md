@@ -1,4 +1,5 @@
 # The-Boolean-Autocrats
+This project is a badic application representing something of the sorts like Facebook. It provides data to keep for your tasks, share news and events, as well as add friends, and message people in a chat.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -28,6 +29,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## DB-Diagram
 
-
+![image](https://user-images.githubusercontent.com/47504641/58830074-0fd8ab00-860f-11e9-9edd-9521d5d99bd3.png)
 
 https://dbdiagram.io/embed/5cf569fd1f6a891a6a65911a
