@@ -1,4 +1,4 @@
-![image](https://imgflip.com/gif/32kfcz)
+![image](<a href="https://imgflip.com/gif/32kfcz"><img src="https://i.imgflip.com/32kfcz.gif" title="made at imgflip.com"/></a>)
 
 
 # The-Boolean-Autocrats
