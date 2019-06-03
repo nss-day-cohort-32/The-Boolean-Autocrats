@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Card } from "reactstrap"
-import Calendar from 'react-calendar'
+
 
 class TaskForm extends Component {
 
@@ -50,12 +50,6 @@ class TaskForm extends Component {
                            />
                        </div>
 
-                       <div>
-                           <Calendar
-                               onChange={this.onChange}
-                               value={this.state.date}
-                           />
-                       </div>
 
                        <Button className="primary"
                            type="submit"
