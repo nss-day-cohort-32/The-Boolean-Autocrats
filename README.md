@@ -27,4 +27,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ## DB-Diagram
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/5cf569fd1f6a891a6a65911a'> </iframe>
+
+
+
+https://dbdiagram.io/embed/5cf569fd1f6a891a6a65911a
